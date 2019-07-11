@@ -7,7 +7,7 @@ addons:
     - octave
 
 before_script:
-- octave-cli --eval "addpath('$PWD\mydirectory')"          #Adding a subdirectory to path
+- octave-cli --eval "addpath('mydirectory');savepath"      #Adding and saving the subdirectory to Octave path
 
 script:
 - octave-cli simpleTest.m                                  # Running a MATLAB/Octave script in root
