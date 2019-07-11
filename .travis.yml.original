@@ -1,0 +1,23 @@
+# Original by Michael Hirsch, Ph.D. https://www.scivision.dev/windows-matlab-octave-continuous-integration/
+
+language: c
+group: travis_latest
+
+addons:
+  apt:
+    packages:
+    - octave
+
+matrix:
+  include:
+  - os: linux
+  - os: windows
+    language: sh
+    before_install:
+    - choco install octave.portable
+  - os: osx
+    before_install:
+    - brew install octave > /dev/null
+
+script:
+- octave-cli test_myfuncs.m

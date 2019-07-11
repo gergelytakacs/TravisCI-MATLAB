@@ -6,16 +6,5 @@ addons:
     packages:
     - octave
 
-matrix:
-  include:
-  - os: linux
-  - os: windows
-    language: sh
-    before_install:
-    - choco install octave.portable
-  - os: osx
-    before_install:
-    - brew install octave > /dev/null
-
 script:
 - octave-cli simpleTest.m
