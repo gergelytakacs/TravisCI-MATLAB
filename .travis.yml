@@ -9,3 +9,5 @@ addons:
 script:
 - octave-cli simpleTest.m     # Running a MATLAB/Octave script
 - octave-cli --eval "rand(4)" # Evaluate a function from Octave CLI
+
+- octave-cli --eval "addtopath('$PWD\mydirectory')"
