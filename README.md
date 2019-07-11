@@ -1,2 +1,3 @@
 # TravisCI-MATLAB
-Test repository for testing MATLAB scripts through Travis CI
+
+Test repository contains an example on how to test MATLAB scripts through Travis CI via Octave.
